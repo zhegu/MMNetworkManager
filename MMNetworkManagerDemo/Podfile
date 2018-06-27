@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/zhegu/LZRepos.git'
+platform :ios,'9.0'
+target 'MMNetworkManagerDemo' do
+	pod 'Moya', '10.0.1'    	
+	pod 'Moya/RxSwift', '10.0.1'
+	pod 'MMTools'
+ 	pod 'ObjectMapper', '3.1.0'
+use_frameworks!
+    
+end

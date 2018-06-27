@@ -1,0 +1,6 @@
+framework module MMTools {
+  umbrella header "MMTools-umbrella.h"
+
+  export *
+  module * { export * }
+}
