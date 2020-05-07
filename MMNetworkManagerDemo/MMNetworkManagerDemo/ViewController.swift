@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        DateUtil
         let view = UIView()
-        view.pleaseWaitWithImages(Array(), timeInterval: 0)
-        let a = kScreenW
+//        view.pleaseWaitWithImages(Array(), timeInterval: 0)
+//        let a = kScreenW
         // Do any additional setup after loading the view, typically from a nib.
     }
 

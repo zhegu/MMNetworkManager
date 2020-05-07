@@ -2,8 +2,8 @@
 //  HttpApiManager.swift
 //  mts-manager
 //
-//  Created by lizhe on 2018/2/23.
-//  Copyright © 2018年 com.ctsi.mts.iphone. All rights reserved.
+//  Created by 李哲 on 2018/6/26.
+//  Copyright © 2018年 李哲. All rights reserved.
 //
 
 import Foundation
@@ -22,26 +22,26 @@ public var httpConfig:HttpConfig = .Test
 public var httpBaseUrl:URL{
     switch httpConfig {
     case .Develop:
-        return URL.init(string:"http://192.168.5.9:8082")!
+        return URL.init(string:"http://xxx.xxx.xxx.xxx:8082")!
     case .Test:
-        return URL.init(string:"http://192.9.100.76:60001")!
+        return URL.init(string:"http://xxx.xxx.xxx.xxx:60001")!
     case .PreRelease:
         return URL.init(string:"11")!
     case .Release:
-        return URL.init(string:"http://118.85.200.78:60008")!
+        return URL.init(string:"http://xxx")!
     }
 }
 
 public var httpFreeExperienceUrl:URL{
     switch httpConfig {
     case .Develop:
-        return URL.init(string:"http://192.9.100.76:60007/mts/api/client_api.html")!
+        return URL.init(string:"http://xxx")!
     case .Test:
-        return URL.init(string:"http://111.235.156.38/mts/api/client_api.html?comefrom=ios")!
+        return URL.init(string:"http://xxx")!
     case .PreRelease:
-        return URL.init(string:"http://118.85.200.84:38080/mts/api/client_api.html")!
+        return URL.init(string:"http://xxx")!
     case .Release:
-        return URL.init(string:"http://111.235.156.38/mts/api/client_api.html?comefrom=ios")!
+        return URL.init(string:"http://xxx")!
     }
 }
 
@@ -71,11 +71,11 @@ public struct NetworkRequest {
     // MARK: -取消所有请求
     public static func cancelAllRequest() {
         //    MyAPIProvider.manager.session.invalidateAndCancel()  //取消所有请求
-        baseRxProvicer?.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
-            dataTasks.forEach { $0.cancel() }
-            uploadTasks.forEach { $0.cancel() }
-            downloadTasks.forEach { $0.cancel() }
-        }
+//        baseRxProvicer?.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
+//            dataTasks.forEach { $0.cancel() }
+//            uploadTasks.forEach { $0.cancel() }
+//            downloadTasks.forEach { $0.cancel() }
+//        }
         
         //let sessionManager = Alamofire.SessionManager.default
         //sessionManager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in

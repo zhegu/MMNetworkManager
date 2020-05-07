@@ -2,15 +2,15 @@
 //  Observable+ObjectMapper.swift
 //  RxSwiftMoya
 //
-//  Created by Chao Li on 9/20/16.
-//  Copyright © 2016 ERStone. All rights reserved.
+//  Created by 李哲 on 2018/6/26.
+//  Copyright © 2018年 李哲. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 import Moya
 import ObjectMapper
-import Result
+//import Result
 
 fileprivate let RESULT_CODE = "code"
 fileprivate let RESULT_MSG = "message"
