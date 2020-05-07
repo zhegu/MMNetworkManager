@@ -18,7 +18,6 @@ class ViewController: UIViewController {
 //        let a = kScreenW
         // Do any additional setup after loading the view, typically from a nib.
         //回滚准备
-        //回滚2
     }
 
     override func didReceiveMemoryWarning() {
