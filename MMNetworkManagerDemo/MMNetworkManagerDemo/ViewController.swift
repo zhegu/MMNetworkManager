@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 //        view.pleaseWaitWithImages(Array(), timeInterval: 0)
 //        let a = kScreenW
         // Do any additional setup after loading the view, typically from a nib.
+        //回滚准备
     }
 
     override func didReceiveMemoryWarning() {
