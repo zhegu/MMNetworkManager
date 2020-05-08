@@ -1,6 +1,5 @@
 PODS:
-  - Alamofire (5.0.2)
-  - MMTools (1.0.1)
+  - Alamofire (5.1.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -8,11 +7,10 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - ObjectMapper (3.5.1)
-  - RxSwift (5.0.1)
+  - ObjectMapper (3.5.2)
+  - RxSwift (5.1.1)
 
 DEPENDENCIES:
-  - MMTools
   - Moya (= 14.0.0)
   - Moya/RxSwift (= 14.0.0)
   - ObjectMapper
@@ -23,16 +21,13 @@ SPEC REPOS:
     - Moya
     - ObjectMapper
     - RxSwift
-  https://github.com/zhegu/LZRepos.git:
-    - MMTools
 
 SPEC CHECKSUMS:
-  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
-  MMTools: db9a7931f8b819d91de19f81810a3774577ff0ad
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: b33c7e9de2b38c9b6a8a45d5d5a67950cd1aa065
+PODFILE CHECKSUM: b5788f1e3fa174f7d3a964018f0abea8a8936826
 
 COCOAPODS: 1.8.4

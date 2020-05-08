@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MMTools
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

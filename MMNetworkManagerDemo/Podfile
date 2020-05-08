@@ -4,7 +4,7 @@ platform :ios,'13.0'
 target 'MMNetworkManagerDemo' do
 	pod 'Moya', '14.0.0'
 	pod 'Moya/RxSwift', '14.0.0'
-	pod 'MMTools'
+	#pod 'MMTools'
  	pod 'ObjectMapper'
 use_frameworks!
     
