@@ -22,11 +22,8 @@ class ViewController: UIViewController {
         
         
         //test
-<<<<<<< HEAD
-        //ccccc
-=======
-        //BBB
->>>>>>> master
+        
+        //zzz
     }
 
     override func didReceiveMemoryWarning() {
