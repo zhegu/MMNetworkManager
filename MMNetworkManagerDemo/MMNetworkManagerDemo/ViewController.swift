@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         view.addSubview(btn)
         //test
-        
+        let label = UILabel()
         //zzz mmm
     }
 
