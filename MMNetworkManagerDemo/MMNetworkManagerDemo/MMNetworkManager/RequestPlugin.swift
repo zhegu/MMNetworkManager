@@ -8,8 +8,7 @@
 
 import Foundation
 import Moya
-//import Result
-import MMTools
+
 /// show or hide the loading hud
 
 //AccessTokenPlugin 管理AccessToken的插件
@@ -105,17 +104,17 @@ public final class RequestLoadingPlugin: PluginType {
 
     public func willSend(_ request: RequestType, target: TargetType) {
         print("开始请求")
-        LZNoticeHelper.wait()
+//        LZNoticeHelper.wait()
     }
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
         var message = "网络异常，请稍后重试";
-        LZNoticeHelper.clear()
+//        LZNoticeHelper.clear()
         switch result {
         case let .success(response1):
             if response1.statusCode > 300 {
                 message = "网络请求错误"
-                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
+//                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
 //                viewController.view.makeToast(message, duration: 1.0, position: ToastpositionCenter)
             }
         case let .failure(error):
@@ -146,7 +145,7 @@ public final class RequestLoadingPlugin: PluginType {
                 default:
                     message = "网络请求错误，请稍后重试"
                 }
-                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
+//                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
 //                viewController.view.makeToast(message, duration: 1.0, position: ToastpositionCenter)
             }
         }
