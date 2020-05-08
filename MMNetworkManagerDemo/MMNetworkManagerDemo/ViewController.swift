@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //回滚准备
         let btn = UIButton()
-        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 100) //frame设置
         view.addSubview(btn)
         //test
         let label = UILabel()
