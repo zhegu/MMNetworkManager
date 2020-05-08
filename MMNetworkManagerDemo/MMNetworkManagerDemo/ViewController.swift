@@ -24,8 +24,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         let label2 = UILabel()
         //zzz mmm
-        //切换1
-        //hello
+        //切换
     }
 
     override func didReceiveMemoryWarning() {
