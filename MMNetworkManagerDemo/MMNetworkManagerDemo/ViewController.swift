@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         view.addSubview(btn)
         //test
         let label = UILabel()
+        let label2 = UILabel()
         //zzz mmm
     }
 
