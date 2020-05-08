@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //回滚准备
         let btn = UIButton()
-        
+        var btnTips = UIButton()
     }
 
     override func didReceiveMemoryWarning() {
