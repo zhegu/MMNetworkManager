@@ -2,14 +2,13 @@
 //  RequestPluginExample.swift
 //  MoyaStudy
 //
-//  Created by fancy on 2017/4/13.
-//  Copyright © 2017年 王森. All rights reserved.
+//  Created by 李哲 on 2018/6/26.
+//  Copyright © 2018年 李哲. All rights reserved.
 //
 
 import Foundation
 import Moya
-import Result
-import MMTools
+
 /// show or hide the loading hud
 
 //AccessTokenPlugin 管理AccessToken的插件
@@ -18,7 +17,7 @@ import MMTools
 //NetworkLoggerPlugin 管理网络log的插件
 
 //网络日志输出
-public let networkLoggerPlugin = NetworkLoggerPlugin(verbose: true, cURL: false, output: nil, requestDataFormatter: nil,responseDataFormatter: nil)
+public let networkLoggerPlugin = NetworkLoggerPlugin(configuration: NetworkLoggerPlugin().configuration)
 
 //网络请求小菊花
 public let newworkActivityPlugin = NetworkActivityPlugin { (change,LoginHttpApiManager)  -> () in
@@ -31,12 +30,12 @@ public let newworkActivityPlugin = NetworkActivityPlugin { (change,LoginHttpApiM
 }
 
 //设置请求头
-public let myEndpointClosure = { (target: MultiTarget) -> Endpoint<MultiTarget> in
+public let myEndpointClosure = { (target: MultiTarget) -> Endpoint in
     
     let url1 = target.baseURL as URL
     let url2 = url1.appendingPathComponent(target.path)
     
-    let endpoint: Endpoint<MultiTarget> = Endpoint<MultiTarget>(
+    let endpoint: Endpoint = Endpoint(
         url: url2.absoluteString,
         sampleResponseClosure: {.networkResponse(200, target.sampleData)},
         method: target.method,
@@ -50,7 +49,7 @@ public let myEndpointClosure = { (target: MultiTarget) -> Endpoint<MultiTarget> 
 }
 
 //设置超时时常等
-public let myRequestClosure = {(endpoint: Endpoint<MultiTarget>, closure: MoyaProvider<MultiTarget>.RequestResultClosure) -> Void in
+public let myRequestClosure = {(endpoint: Endpoint, closure: MoyaProvider<MultiTarget>.RequestResultClosure) -> Void in
     if var urlRequest = try? endpoint.urlRequest() {
         urlRequest.timeoutInterval = 5// 超时时长 // TODO: 修改超时时长
         closure(.success(urlRequest))
@@ -105,17 +104,17 @@ public final class RequestLoadingPlugin: PluginType {
 
     public func willSend(_ request: RequestType, target: TargetType) {
         print("开始请求")
-        LZNoticeHelper.wait()
+//        LZNoticeHelper.wait()
     }
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
         var message = "网络异常，请稍后重试";
-        LZNoticeHelper.clear()
+//        LZNoticeHelper.clear()
         switch result {
         case let .success(response1):
             if response1.statusCode > 300 {
                 message = "网络请求错误"
-                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
+//                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
 //                viewController.view.makeToast(message, duration: 1.0, position: ToastpositionCenter)
             }
         case let .failure(error):
@@ -146,7 +145,7 @@ public final class RequestLoadingPlugin: PluginType {
                 default:
                     message = "网络请求错误，请稍后重试"
                 }
-                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
+//                LZNoticeHelper.showNoticeWithText(.info, text: message, autoClear: true, autoClearTime: 2)
 //                viewController.view.makeToast(message, duration: 1.0, position: ToastpositionCenter)
             }
         }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "MMNetworkManager"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "MMNetworkManager is our Network Manager"
 
   #s.description  = <<-DESC DESC
@@ -61,10 +61,9 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
-  s.dependency "Moya", "10.0.1"
-  s.dependency 'Moya/RxSwift', '10.0.1'
-  s.dependency 'MMTools'
-  s.dependency 'ObjectMapper', '3.1.0'
+  s.dependency "Moya", "14.0.0"
+  s.dependency 'Moya/RxSwift', '14.0.0'
+  s.dependency 'ObjectMapper'
 
   s.frameworks  = "Foundation","UIKit"
 
