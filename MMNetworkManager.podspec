@@ -61,9 +61,9 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
-  s.dependency "Moya", "14.0.0"
-  s.dependency 'Moya/RxSwift', '14.0.0'
-  s.dependency 'ObjectMapper'
+  #s.dependency "Moya", "14.0.0"
+  #s.dependency 'Moya/RxSwift', '14.0.0'
+  #s.dependency 'ObjectMapper'
 
   s.frameworks  = "Foundation","UIKit"
 
